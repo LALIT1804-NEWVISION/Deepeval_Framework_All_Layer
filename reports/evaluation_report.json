@@ -1,0 +1,33 @@
+[
+    {
+        "test_case_id": "TC003",
+        "category": "RAG",
+        "input": "What is Playwright?",
+        "expected_output": "Playwright is a framework for end-to-end web testing.",
+        "actual_output": "Playwright is a framework for end-to-end web testing.",
+        "metrics": [
+            {
+                "metric": "Answer Relevancy",
+                "score": 1.0,
+                "threshold": 0.7,
+                "status": "PASS",
+                "reason": "The score is 1.00 because the response directly addresses the question without any irrelevant statements, providing a clear and concise answer about Playwright."
+            },
+            {
+                "metric": "Faithfulness",
+                "score": 1.0,
+                "threshold": 0.7,
+                "status": "PASS",
+                "reason": "The score is 1.00 because there are no contradictions present."
+            },
+            {
+                "metric": "Contextual Precision",
+                "score": 1.0,
+                "threshold": 0.7,
+                "status": "PASS",
+                "reason": "The score is 1.00 because the single relevant node (ranked 1) correctly defines Playwright as an end-to-end testing framework, directly supporting the input. There are no irrelevant nodes to consider."
+            }
+        ],
+        "overall_status": "PASS"
+    }
+]
