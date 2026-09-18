@@ -17,7 +17,9 @@ from utils.data_loader import load_test_data
 from metrics import (
     create_answer_relevancy_metric,
     create_faithfulness_metric,
-    create_contextual_precision_metric
+    create_contextual_relevancy_metric,
+    create_contextual_precision_metric,
+    create_contextual_recall_metric,
 )
 
 # NEW
@@ -39,11 +41,20 @@ evaluation_model = OllamaModel(
 
 answer_relevancy_metric = create_answer_relevancy_metric(evaluation_model)
 faithfulness_metric = create_faithfulness_metric(evaluation_model)
+contextual_relevancy_metric = create_contextual_relevancy_metric(evaluation_model)
 contextual_precision_metric = create_contextual_precision_metric(evaluation_model)
+contextual_recall_metric = create_contextual_recall_metric(evaluation_model)
 
 # Metrics List
 
-metrics = [answer_relevancy_metric,faithfulness_metric,contextual_precision_metric]
+metrics = [
+    answer_relevancy_metric,
+    faithfulness_metric,
+    contextual_relevancy_metric,
+    contextual_precision_metric,
+    contextual_recall_metric
+
+]
 
 # Generate Actual Output
 
