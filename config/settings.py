@@ -1,37 +1,19 @@
 from pathlib import Path
-import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATA_DIR = BASE_DIR / "data"
-REPORT_DIR = BASE_DIR / "reports"
+DOCUMENT_PATH = BASE_DIR / "documents" / "ecommerce.txt"
 
-TEST_DATA_FILE = DATA_DIR / "test_data.json"
-REPORT_FILE = REPORT_DIR / "evaluation_report.json"
+VECTOR_DB_PATH = BASE_DIR / "vector_db"
+REPORT_FILE = Path("reports/evaluation_report.json")
+RETRIEVAL_DATASET = (BASE_DIR/ "testdata"/ "rag"/ "rag_retrieval_dataset.json")
 
-# DeepEval configuration
-THRESHOLD = float(os.getenv("EVAL_THRESHOLD", "0.7"))
+GROUNDING_DATASET = (BASE_DIR/ "testdata"/ "rag"/ "rag_generation_dataset.json")
 
-# Ollama configuration
-OLLAMA_MODEL = os.getenv(
-    "OLLAMA_MODEL",
-    "qwen2.5:7b"
-    #"qwen2.5-coder:1.5b"
-)
+OLLAMA_MODEL = "qwen2.5:7b"
 
-OLLAMA_BASE_URL = os.getenv(
-    "OLLAMA_BASE_URL",
-    "http://localhost:11434"
-    #"http://172.40.0.50:11434/"
-)
+OLLAMA_BASE_URL = "http://localhost:11434"
 
-# Evaluation settings
-TEMPERATURE = float(
-    os.getenv("TEMPERATURE", "0")
-)
+TEMPERATURE = 0
 
-# Make sure report directory exists
-REPORT_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
+THRESHOLD = 0.7

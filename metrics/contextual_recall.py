@@ -1,9 +1,9 @@
 from deepeval.metrics import ContextualRecallMetric
-
-def create_contextual_recall_metric(evaluation_model):
-
+from config.settings import THRESHOLD
+def create_contextual_recall_metric(model):
     return ContextualRecallMetric(
-        threshold=0.7,
-        model=evaluation_model,
-        include_reason=True
+        threshold=THRESHOLD,
+        model=model,
+        include_reason=True,
+        async_mode=False
     )

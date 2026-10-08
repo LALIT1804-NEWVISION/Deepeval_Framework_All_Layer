@@ -1,13 +1,32 @@
-from agents.research_agent import research_agent
-from agents.answer_agent import answer_agent
+class SupervisorAgent:
 
-def supervisor_agent(query: str,retrieval_context: list,evaluation_model) -> str:
+    def __init__(self,research_agent,answer_agent):
+        self.research_agent = research_agent
+        self.answer_agent = answer_agent
 
-    # Step 1: Research Agent
-    research_result = research_agent(query,retrieval_context)
+    def run(self,question: str) -> dict:
 
-    # Step 2: Answer Agent
-    final_answer = answer_agent(query,research_result,evaluation_model)
+        research_result = (self.research_agent.search(question))
+        source = research_result["source"]
+        retrieval_context = (research_result["retrieval_context"])
+        answer = self.answer_agent.generate(question,retrieval_context)
 
-    # Step 3: Final response
-    return final_answer
+        return {
+            "source": source,
+            "answer": answer,
+            "retrieval_context": retrieval_context
+        }
+
+
+def supervisor_agent(
+    question,
+    research_agent,
+    answer_agent
+):
+
+    supervisor = SupervisorAgent(
+        research_agent,
+        answer_agent
+    )
+
+    return supervisor.run(question)

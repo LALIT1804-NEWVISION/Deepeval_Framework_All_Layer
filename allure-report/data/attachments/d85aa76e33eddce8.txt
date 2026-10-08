@@ -1,1 +1,0 @@
-Playwright is an end-to-end testing framework for modern web applications.

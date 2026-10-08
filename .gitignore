@@ -1,24 +1,38 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Pytest
-.pytest_cache/
-
-# DeepEval
-.deepeval/
-
-# Virtual environments
+# Virtual Environment
+myenv314/
 venv/
 .venv/
-myvenv314/
 
-# Environment
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
 .env
 
 # IDE
 .vscode/
+.idea/
 
-# Reports
+# Test reports
+reports/
+allure-results/
+allure-report/
+
+# Chroma / Vector DB
+chroma_db/
+*.db
+
+# Logs
 *.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+
+# Python cache
+.pytest_cache/

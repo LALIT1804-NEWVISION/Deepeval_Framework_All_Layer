@@ -2,3 +2,5 @@ deepeval
 pytest
 ollama
 python-dotenv
+allure-pytest
+chromadb

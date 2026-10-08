@@ -29,5 +29,174 @@
             }
         ],
         "overall_status": "PASS"
+    },
+    {
+        "test_case_id": "RAG006",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "How can Page Object Model and fixtures be used together in Playwright?",
+        "expected_output": "Page Object Model can organize locators and reusable actions into page classes, while fixtures provide reusable test setup and dependencies.",
+        "actual_output": "Page Object Model can be implemented in Playwright using page classes containing locators and reusable actions. Playwright provides built-in test fixtures for reusable test setup, test dependencies, and isolated test environments. These fixtures can be used alongside page classes to create a robust testing framework. By combining page classes with fixtures, you can achieve a well-structured and maintainable test suite.",
+        "source": "document",
+        "retrieval_context": [
+            "Page Object Model can be implemented in Playwright using page classes containing locators and reusable actions.\nPlaywright supports trace recording for debugging failed tests.\nPlaywright provides built-in test fixtures for reusable test setup, test dependencies, and isolated test environments."
+        ],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0.6666666666666666,
+                "reason": "The score is 0.67 because the retrieval context includes relevant information about implementing Page Object Model in Playwright and the use of built-in test fixtures, which are directly related to the input question. However, the mention of trace recording for debugging is irrelevant, slightly reducing the score."
+            },
+            "contextual_precision": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the relevant node (rank 1) is correctly ranked higher than the irrelevant node (rank 2), which provides information not directly related to the use of Page Object Model and fixtures in Playwright."
+            },
+            "contextual_recall": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the expected output directly aligns with the information provided in the 1st node of the retrieval context, without any contradictions or missing details."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG007",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "How can Playwright automatically wait before performing an action?",
+        "expected_output": "Playwright automatically waits for elements to become actionable before performing actions.",
+        "actual_output": "The information is not available\nin the Playwright knowledge base.",
+        "source": "llm",
+        "retrieval_context": [],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0,
+                "reason": "The score is 0.00 because there are no provided reasons for irrelevancy or relevant statements that could contribute to a higher score, indicating the retrieval context is entirely irrelevant to the input query."
+            },
+            "contextual_precision": {
+                "score": 0,
+                "reason": "The score is 0.00 because the first node in the retrieval contexts (rank 1) is marked as 'no' and provides no useful information, making it irrelevant to the input. There are no 'yes' nodes to rank higher, hence the score is 0.00."
+            },
+            "contextual_recall": {
+                "score": 0.0,
+                "reason": "The score is 0.00 because there are no nodes in the retrieval context to attribute the sentence 'Playwright automatically waits for elements to become actionable before performing actions.' to."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG001",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "Which browsers does Playwright support?",
+        "expected_output": "Playwright supports Chromium, Firefox, and WebKit browsers.",
+        "actual_output": "Playwright supports Chromium, Firefox, and WebKit browsers.",
+        "source": "vector_db",
+        "retrieval_context": [
+            "Playwright is an end-to-end testing framework for modern web applications.\nPlaywright supports Chromium, Firefox, and WebKit browsers.\nPlaywright provides automatic waiting for actions and assertions."
+        ],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0.3333333333333333,
+                "reason": "The score is 0.33 because the retrieval context primarily focuses on Playwright's definition and functionality rather than its supported browsers. However, the statement 'Playwright supports Chromium, Firefox, and WebKit browsers.' directly addresses the input, albeit not prominently."
+            },
+            "contextual_precision": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the first node in the retrieval context is correctly ranked as 'yes' and provides a direct match to the input, with no irrelevant nodes ranked higher."
+            },
+            "contextual_recall": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because all sentences in the expected output are directly supported by the node in the retrieval context, indicating a perfect match."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG002",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "What are Playwright fixtures used for?",
+        "expected_output": "Playwright fixtures provide reusable test setup and test dependencies.",
+        "actual_output": "The information is not available in the Playwright knowledge base.",
+        "source": "llm",
+        "retrieval_context": [],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0,
+                "reason": "The score is 0.00 because there are no provided reasons for irrelevancy or relevant statements that could contribute to a score, making it impossible to determine any contextual relevance."
+            },
+            "contextual_precision": {
+                "score": 0,
+                "reason": "The score is 0.00 because the single 'no' verdict for the first node indicates that it is not relevant to the input, and there are no 'yes' verdicts to rank higher, resulting in a score of 0.00."
+            },
+            "contextual_recall": {
+                "score": 0.0,
+                "reason": "The score is 0.00 because there are no nodes in the retrieval context to attribute the sentence 'Playwright fixtures provide reusable test setup and test dependencies.' to."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG003",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "Which browsers and programming languages does Playwright support?",
+        "expected_output": "Playwright supports Chromium, Firefox, and WebKit and provides APIs for JavaScript, TypeScript, Python, Java, and .NET.",
+        "actual_output": "Playwright supports Chromium, Firefox, and WebKit browsers. The information about supported programming languages is not available in the Playwright knowledge base.",
+        "source": "vector_db",
+        "retrieval_context": [
+            "Playwright is an end-to-end testing framework for modern web applications.\nPlaywright supports Chromium, Firefox, and WebKit browsers.\nPlaywright provides automatic waiting for actions and assertions."
+        ],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0.3333333333333333,
+                "reason": "The score is 0.33 because the retrieval context does not provide information about supported programming languages, which is part of the input query, and only partially addresses the supported browsers, which is less relevant to the programming languages aspect of the input."
+            },
+            "contextual_precision": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the relevant node (rank 1) is correctly ranked first and directly addresses the input, making all nodes relevant and in the right order."
+            },
+            "contextual_recall": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because all information in the expected output directly aligns with the capabilities of Playwright mentioned in the 1st node of the retrieval context."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG004",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "What programming languages does Playwright support?",
+        "expected_output": "Playwright supports JavaScript, TypeScript, Python, Java, and .NET.",
+        "actual_output": "The information is not available in the Playwright knowledge base.",
+        "source": "llm",
+        "retrieval_context": [],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0,
+                "reason": "The score is 0.00 because there are no provided reasons for irrelevancy or relevant statements in the retrieval context to support the input query about supported programming languages for Playwright."
+            },
+            "contextual_precision": {
+                "score": 0,
+                "reason": "The score is 0.00 because the first node (rank 1) is marked as 'no' and provides no relevant information, which is why it should be ranked lower than the 'yes' nodes that could potentially provide useful details about Playwright's supported programming languages."
+            },
+            "contextual_recall": {
+                "score": 0.0,
+                "reason": "The score is 0.00 because there are no nodes in the retrieval context to attribute this sentence to."
+            }
+        }
+    },
+    {
+        "test_case_id": "RAG005",
+        "evaluation_type": "Retrieval Evaluation",
+        "question": "What is Playwright Page Object Model?",
+        "expected_output": "Page Object Model in Playwright can be implemented using page classes that contain locators and reusable actions.",
+        "actual_output": "Page Object Model can be implemented in Playwright using page classes containing locators and reusable actions.",
+        "source": "document",
+        "retrieval_context": [
+            "Page Object Model can be implemented in Playwright using page classes containing locators and reusable actions.\nPlaywright supports trace recording for debugging failed tests.\nPlaywright provides built-in test fixtures for reusable test setup, test dependencies, and isolated test environments."
+        ],
+        "metrics": {
+            "contextual_relevancy": {
+                "score": 0.3333333333333333,
+                "reason": "The score is 0.33 because the retrieval context primarily focuses on features unrelated to Playwright Page Object Model, such as trace recording and test fixtures. However, the relevant statement 'Page Object Model can be implemented in Playwright using page classes containing locators and reusable actions' provides a direct answer to the input query, albeit in a limited manner."
+            },
+            "contextual_precision": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the first node in the retrieval context is ranked correctly as 'yes', as it directly addresses the input by explaining how Page Object Model can be implemented in Playwright. There are no irrelevant nodes to consider."
+            },
+            "contextual_recall": {
+                "score": 1.0,
+                "reason": "The score is 1.00 because the expected output sentence directly matches the content of the 1st node in retrieval context, providing a clear and accurate description of implementing Page Object Model in Playwright."
+            }
+        }
     }
 ]
