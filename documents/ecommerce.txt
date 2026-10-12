@@ -1,52 +1,103 @@
 E-commerce Store Knowledge Base
+1. Available iPhone 16 Models
 
 The store offers multiple iPhone 16 models.
 
 Available iPhone 16 models include:
-- iPhone 16
-- iPhone 16 Plus
-- iPhone 16 Pro
-- iPhone 16 Pro Max
 
+iPhone 16
+iPhone 16 Plus
+iPhone 16 Pro
+iPhone 16 Pro Max
+
+2. iPhone 16 Colors
 
 The standard iPhone 16 is available in the following colors:
-- Black
-- White
-- Pink
-- Teal
-- Ultramarine
 
+Black
+White
+Pink
+Teal
+Ultramarine
+3. Order Placement Requirements
 
 To place an order, customers must provide a valid delivery address and select a supported payment method.
 
 The store supports the following payment methods:
 
-- Credit cards
-- Debit cards
-- UPI
-- Net banking
+Credit cards
+Debit cards
+UPI
+Net banking
 
 Customers can use a previously saved delivery address or provide a new valid delivery address.
 
+4. Shipping Policies
 
 The store provides free shipping on eligible orders.
 
 Standard shipping takes 3 to 5 business days.
-
 Express shipping takes 1 to 2 business days.
 
+Shipping eligibility and delivery times may depend on the order and delivery location.
+
+5. Order Tracking
 
 Customers can track their orders using the order tracking page and tracking number.
 
 Customers can check their order status using the order tracking page.
 
+6. Order Cancellation Policy
 
-Orders can be cancelled from the order details page before they are shipped.
+Customers can cancel their orders from the order details page before the orders are shipped.
 
+Once an order has been shipped, cancellation is not available through the standard order cancellation process.
 
-Products can be returned within 30 days if they are unused and in their original condition.
+For assistance with cancellation-related questions, customers can contact customer support.
+
+7. Return Policy
+
+Customers can return products within 30 days if the products are unused and in their original condition.
+
+Products that do not meet these eligibility requirements may not qualify for a return.
+
+Customers should contact customer support for assistance with return eligibility and the return process.
+
+8. Refund Policy
 
 Eligible returned products are refunded according to the store's refund policy.
 
+Refund eligibility depends on the product meeting the return policy requirements.
 
-The store provides customer support for payment, shipping, order tracking, cancellation, and returns.
+Customers should contact customer support for information about refund status and processing.
+
+The exact refund processing time and refund method are not specified in this knowledge base.
+
+9. Customer Support
+
+The store provides customer support for the following topics:
+
+Payment-related questions
+Shipping and delivery
+Order tracking and order status
+Order cancellation
+Product returns
+Refund-related questions
+
+Customers can contact customer support for assistance with these topics.
+
+10. Handling Unknown Information
+
+If the requested information is not explicitly available in this knowledge base, the assistant must not invent details or make unsupported assumptions.
+
+The assistant should clearly state that the requested information is not available in the knowledge base and recommend contacting customer support when appropriate.
+
+The assistant must not invent:
+
+Payment methods that are not listed
+Shipping times that are not specified
+Cancellation exceptions that are not documented
+Return eligibility rules beyond those specified
+Exact refund processing times or refund methods that are not provided
+
+All answers must be grounded in the retrieved knowledge base context.

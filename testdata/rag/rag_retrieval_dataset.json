@@ -1,5 +1,5 @@
 [
- {
+  {
     "id": "RAG001",
     "rag_capability": "Contextual Relevancy",
     "use_case": "Search & discover",
@@ -10,9 +10,7 @@
       "llm"
     ],
     "expected_output": "The store offers iPhone 16, iPhone 16 Plus, iPhone 16 Pro, and iPhone 16 Pro Max.",
-    "metrics": [
-      "contextual_relevancy"
-    ]
+    "metrics": ["contextual_relevancy"]
   },
   {
     "id": "RAG002",
@@ -25,9 +23,7 @@
       "llm"
     ],
     "expected_output": "The iPhone 16 is available in Black, White, Pink, Teal, and Ultramarine.",
-    "metrics": [
-      "contextual_precision"
-    ]
+    "metrics": ["contextual_precision"]
   },
   {
     "id": "RAG003",
@@ -40,8 +36,45 @@
       "llm"
     ],
     "expected_output": "To place an order, the customer needs to provide a saved or valid delivery address and select a supported payment method.",
-    "metrics": [
-      "contextual_recall"
-    ]
+    "metrics": ["contextual_recall"]
+  },
+  {
+    "id": "RAG004",
+    "rag_capability": "Answer Relevancy",
+    "use_case": "Order & Payment Information",
+    "question": "What payment methods are supported by the store, and what information is required to place an order?",
+    "expected_flow": [
+      "document",
+      "vector_db",
+      "llm"
+    ],
+    "expected_output": "To place an order, customers must provide a valid delivery address and select a supported payment method. Supported payment methods include credit cards, debit cards, UPI, and net banking. Customers can use a saved address or provide a new valid delivery address.",
+    "metrics": ["answer_relevancy"]
+  },
+  {
+    "id": "RAG005",
+    "rag_capability": "Faithfulness",
+    "use_case": "Shipping & Order Tracking",
+    "question": "What are the shipping delivery times, and how can customers track their orders?",
+    "expected_flow": [
+      "document",
+      "vector_db",
+      "llm"
+    ],
+    "expected_output": "Standard shipping takes 3 to 5 business days, while express shipping takes 1 to 2 business days. Customers can track their orders and check order status using the order tracking page and tracking number.",
+    "metrics": ["faithfulness"]
+  },
+  {
+    "id": "RAG006",
+    "rag_capability": "Hallucination",
+    "use_case": "Cancellation & Returns",
+    "question": "What are the store's order cancellation, return, and refund policies?",
+    "expected_flow": [
+      "document",
+      "vector_db",
+      "llm"
+    ],
+    "expected_output": "Orders can be cancelled from the order details page before they are shipped. Products can be returned within 30 days if they are unused and in their original condition. Eligible returned products are refunded according to the store's refund policy.",
+    "metrics": ["hallucination"]
   }
 ]

@@ -31,6 +31,9 @@ from metrics import (
     create_contextual_relevancy_metric,
     create_contextual_precision_metric,
     create_contextual_recall_metric,
+    create_answer_relevancy_metric,
+    create_hallucination_metric,
+    create_faithfulness_metric
 )
 
 
@@ -46,7 +49,7 @@ def test_rag_evaluation():
 
     # CREATE CHUNKS
 
-    chunks = create_chunks(document,chunk_size=1)
+    chunks = create_chunks(document,chunk_size=3)
 
     # CREATE VECTOR DB
    
@@ -186,6 +189,43 @@ def test_rag_evaluation():
                 metric_results["contextual_recall"] = {
                     "score": contextual_recall_metric.score,
                     "reason": contextual_recall_metric.reason
+                }
+
+            # ANSWER RELEVANCY
+
+            if "answer_relevancy" in metric_names:
+
+                answer_relevancy_metric = (create_answer_relevancy_metric(evaluation_model))
+                answer_relevancy_metric.measure(llm_test_case)
+                executed_metrics.append(answer_relevancy_metric)
+                metric_results["answer_relevancy"] = {
+                    "score": answer_relevancy_metric.score,
+                    "reason": answer_relevancy_metric.reason
+                }
+
+            # FAITHFULNESS
+
+            if "faithfulness" in metric_names:
+
+                faithfulness_metric = (create_faithfulness_metric(evaluation_model))
+                faithfulness_metric.measure(llm_test_case)
+                executed_metrics.append(faithfulness_metric)
+                metric_results["faithfulness"] = {
+                    "score": faithfulness_metric.score,
+                    "reason": faithfulness_metric.reason
+                }
+
+            # HALLUCINATION
+
+            if "hallucination" in metric_names:
+
+                llm_test_case.context = retrieval_context
+                hallucination_metric = (create_hallucination_metric(evaluation_model))
+                hallucination_metric.measure(llm_test_case)
+                executed_metrics.append(hallucination_metric)
+                metric_results["hallucination"] = {
+                    "score": hallucination_metric.score,
+                    "reason": hallucination_metric.reason
                 }
 
         else:
